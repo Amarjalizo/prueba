@@ -1,0 +1,76 @@
+﻿kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: lxybondmx
+  namespace: cib-mkrt-rates-dev
+  uid: 7f8ac3c0-9756-44a8-a709-beb7af8481c0
+  resourceVersion: '1794052399'
+  creationTimestamp: '2026-01-19T17:07:13Z'
+  labels:
+    app: lxybondmx
+    app_name: lxybondmx
+    environment: dev
+    ucd_app_name: cib-rates-integracion
+    ucd_comp_name: cib-mw-lxybondmx
+    version: 1.0.0-SNAPSHOT-20260120.103636-4
+  managedFields:
+    - manager: openshift-router
+      operation: Update
+      apiVersion: route.openshift.io/v1
+      time: '2026-01-19T17:07:13Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:status':
+          'f:ingress': {}
+      subresource: status
+    - manager: OpenAPI-Generator
+      operation: Update
+      apiVersion: route.openshift.io/v1
+      time: '2026-01-20T10:42:40Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:labels':
+            .: {}
+            'f:app': {}
+            'f:app_name': {}
+            'f:environment': {}
+            'f:ucd_app_name': {}
+            'f:ucd_comp_name': {}
+            'f:version': {}
+        'f:spec':
+          'f:host': {}
+          'f:port': {}
+          'f:to':
+            'f:kind': {}
+            'f:name': {}
+            'f:weight': {}
+          'f:wildcardPolicy': {}
+    - manager: Mozilla
+      operation: Update
+      apiVersion: route.openshift.io/v1
+      time: '2026-01-20T11:30:58Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:spec':
+          'f:port':
+            'f:targetPort': {}
+spec:
+  host: lxybondmx.scib.dev.corp
+  to:
+    kind: Service
+    name: lxybondmx
+    weight: 100
+  port:
+    targetPort: 8081-tcp
+  wildcardPolicy: None
+status:
+  ingress:
+    - host: lxybondmx.scib.dev.corp
+      routerName: default
+      conditions:
+        - type: Admitted
+          status: 'True'
+          lastTransitionTime: '2026-01-19T17:07:13Z'
+      wildcardPolicy: None
+      routerCanonicalHostname: router-default.apps.cib01.cib.dev.bo1.paas.cloudcenter.corp

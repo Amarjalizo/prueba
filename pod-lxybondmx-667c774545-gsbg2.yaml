@@ -1,0 +1,456 @@
+﻿kind: Pod
+apiVersion: v1
+metadata:
+  generateName: lxybondmx-667c774545-
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.118.7.220/23"],"mac_address":"0a:58:0a:76:07:dc","gateway_ips":["10.118.6.1"],"routes":[{"dest":"10.112.0.0/13","nextHop":"10.118.6.1"},{"dest":"10.120.0.0/13","nextHop":"10.118.6.1"},{"dest":"169.254.169.5/32","nextHop":"10.118.6.1"},{"dest":"100.64.0.0/16","nextHop":"10.118.6.1"}],"ip_address":"10.118.7.220/23","gateway_ip":"10.118.6.1","role":"primary"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.118.7.220"
+          ],
+          "mac": "0a:58:0a:76:07:dc",
+          "default": true,
+          "dns": {}
+      }]
+    kubernetes.io/limit-ranger: 'LimitRanger plugin set: ephemeral-storage request for container lxybondmx; ephemeral-storage limit for container lxybondmx'
+    openshift.io/generated-by: OpenShiftNewApp
+    openshift.io/scc: nonroot-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  resourceVersion: '1794089292'
+  name: lxybondmx-667c774545-gsbg2
+  uid: 18250356-6e40-4c96-9262-d2a827eae7f6
+  creationTimestamp: '2026-01-20T12:10:42Z'
+  managedFields:
+    - manager: kube-controller-manager
+      operation: Update
+      apiVersion: v1
+      time: '2026-01-20T12:10:42Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            .: {}
+            'f:openshift.io/generated-by': {}
+          'f:generateName': {}
+          'f:labels':
+            'f:version': {}
+            'f:pod-template-hash': {}
+            'f:ucd_app_name': {}
+            'f:app': {}
+            .: {}
+            'f:template': {}
+            'f:critical': {}
+            'f:active': {}
+            'f:deploymentconfig': {}
+            'f:app_name': {}
+            'f:ucd_comp_name': {}
+          'f:ownerReferences':
+            .: {}
+            'k:{"uid":"c2973d30-3df1-4278-a1a1-9bcece04ad99"}': {}
+        'f:spec':
+          'f:containers':
+            'k:{"name":"lxybondmx"}':
+              'f:image': {}
+              'f:terminationMessagePolicy': {}
+              .: {}
+              'f:resources':
+                .: {}
+                'f:limits':
+                  .: {}
+                  'f:cpu': {}
+                  'f:memory': {}
+                'f:requests':
+                  .: {}
+                  'f:cpu': {}
+                  'f:memory': {}
+              'f:env':
+                'k:{"name":"BW_PROFILE"}':
+                  .: {}
+                  'f:name': {}
+                  'f:value': {}
+                'k:{"name":"BW_COMPONENT_JOB_FLOWLIMIT"}':
+                  .: {}
+                  'f:name': {}
+                  'f:value': {}
+                'k:{"name":"BW_ENGINE_THREADCOUNT"}':
+                  .: {}
+                  'f:name': {}
+                  'f:value': {}
+                'k:{"name":"DISABLE_BWCE_EAR_VALIDATION"}':
+                  .: {}
+                  'f:name': {}
+                  'f:value': {}
+                'k:{"name":"MY_POD_IP"}':
+                  .: {}
+                  'f:name': {}
+                  'f:valueFrom':
+                    .: {}
+                    'f:fieldRef': {}
+                'k:{"name":"ARTIFACT_URL"}':
+                  .: {}
+                  'f:name': {}
+                  'f:value': {}
+                'k:{"name":"JAVA_TOOL_OPTIONS"}':
+                  .: {}
+                  'f:name': {}
+                  'f:value': {}
+                'k:{"name":"WILY_MOM_PORT"}':
+                  .: {}
+                  'f:name': {}
+                  'f:value': {}
+                'k:{"name":"TZ"}':
+                  .: {}
+                  'f:name': {}
+                  'f:value': {}
+                'k:{"name":"APP_NAME"}':
+                  .: {}
+                  'f:name': {}
+                  'f:value': {}
+                'k:{"name":"DRIVERS_URL"}':
+                  .: {}
+                  'f:name': {}
+                  'f:value': {}
+                .: {}
+                'k:{"name":"THIRD_PARTY_URL"}':
+                  .: {}
+                  'f:name': {}
+                'k:{"name":"JAVA_OPTS_EXT"}':
+                  .: {}
+                  'f:name': {}
+                  'f:value': {}
+                'k:{"name":"CERTS_URL"}':
+                  .: {}
+                  'f:name': {}
+                'k:{"name":"CUSTOM_LOGBACK_URL"}':
+                  .: {}
+                  'f:name': {}
+                'k:{"name":"BW_APP_MONITORING_CONFIG"}':
+                  .: {}
+                  'f:name': {}
+                'k:{"name":"PROJECT_NAME"}':
+                  .: {}
+                  'f:name': {}
+                'k:{"name":"BW_APPLICATION_JOB_FLOWLIMIT"}':
+                  .: {}
+                  'f:name': {}
+                  'f:value': {}
+                'k:{"name":"TIBCO_PLUG_INS_URL"}':
+                  .: {}
+                  'f:name': {}
+                  'f:value': {}
+                'k:{"name":"BW_JAVA_OPTS"}':
+                  .: {}
+                  'f:name': {}
+                  'f:value': {}
+                'k:{"name":"WILY_MOM_FQDN"}':
+                  .: {}
+                  'f:name': {}
+                'k:{"name":"BW_LOGLEVEL"}':
+                  .: {}
+                  'f:name': {}
+                  'f:value': {}
+              'f:readinessProbe':
+                .: {}
+                'f:failureThreshold': {}
+                'f:httpGet':
+                  .: {}
+                  'f:path': {}
+                  'f:port': {}
+                  'f:scheme': {}
+                'f:periodSeconds': {}
+                'f:successThreshold': {}
+                'f:timeoutSeconds': {}
+              'f:securityContext':
+                .: {}
+                'f:capabilities': {}
+                'f:privileged': {}
+                'f:runAsNonRoot': {}
+                'f:runAsUser': {}
+              'f:terminationMessagePath': {}
+              'f:imagePullPolicy': {}
+              'f:ports':
+                .: {}
+                'k:{"containerPort":8080,"protocol":"TCP"}':
+                  .: {}
+                  'f:containerPort': {}
+                  'f:protocol': {}
+              'f:name': {}
+          'f:dnsPolicy': {}
+          'f:enableServiceLinks': {}
+          'f:restartPolicy': {}
+          'f:schedulerName': {}
+          'f:securityContext': {}
+          'f:terminationGracePeriodSeconds': {}
+    - manager: nodecs028.cib01.cib.dev.bo1.paas.cloudcenter.corp
+      operation: Update
+      apiVersion: v1
+      time: '2026-01-20T12:10:42Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            'f:k8s.ovn.org/pod-networks': {}
+      subresource: status
+    - manager: multus-daemon
+      operation: Update
+      apiVersion: v1
+      time: '2026-01-20T12:10:43Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            'f:k8s.v1.cni.cncf.io/network-status': {}
+      subresource: status
+    - manager: kubelet
+      operation: Update
+      apiVersion: v1
+      time: '2026-01-20T12:14:12Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:status':
+          'f:conditions':
+            'k:{"type":"ContainersReady"}':
+              .: {}
+              'f:lastProbeTime': {}
+              'f:lastTransitionTime': {}
+              'f:status': {}
+              'f:type': {}
+            'k:{"type":"Initialized"}':
+              .: {}
+              'f:lastProbeTime': {}
+              'f:lastTransitionTime': {}
+              'f:status': {}
+              'f:type': {}
+            'k:{"type":"PodReadyToStartContainers"}':
+              .: {}
+              'f:lastProbeTime': {}
+              'f:lastTransitionTime': {}
+              'f:status': {}
+              'f:type': {}
+            'k:{"type":"Ready"}':
+              .: {}
+              'f:lastProbeTime': {}
+              'f:lastTransitionTime': {}
+              'f:status': {}
+              'f:type': {}
+          'f:containerStatuses': {}
+          'f:hostIP': {}
+          'f:hostIPs': {}
+          'f:phase': {}
+          'f:podIP': {}
+          'f:podIPs':
+            .: {}
+            'k:{"ip":"10.118.7.220"}':
+              .: {}
+              'f:ip': {}
+          'f:startTime': {}
+      subresource: status
+  namespace: cib-mkrt-rates-dev
+  ownerReferences:
+    - apiVersion: apps/v1
+      kind: ReplicaSet
+      name: lxybondmx-667c774545
+      uid: c2973d30-3df1-4278-a1a1-9bcece04ad99
+      controller: true
+      blockOwnerDeletion: true
+  labels:
+    app: lxybondmx
+    active: online
+    deploymentconfig: lxybondmx
+    app_name: lxybondmx
+    ucd_comp_name: cib-mw-lxybondmx
+    ucd_app_name: cib-rates-integracion
+    version: 1.0.0-SNAPSHOT-20260120.103636-4
+    pod-template-hash: 667c774545
+    template: bwce
+    critical: 'false'
+spec:
+  nodeSelector:
+    node-role.kubernetes.io/compute-default: ''
+  restartPolicy: Always
+  serviceAccountName: default
+  imagePullSecrets:
+    - name: default-dockercfg-dmj4b
+    - name: default-dockercfg-sh9s5
+  priority: 100000
+  schedulerName: default-scheduler
+  enableServiceLinks: true
+  terminationGracePeriodSeconds: 30
+  preemptionPolicy: PreemptLowerPriority
+  nodeName: nodecs028.cib01.cib.dev.bo1.paas.cloudcenter.corp
+  securityContext:
+    seLinuxOptions:
+      level: 's0:c46,c25'
+    seccompProfile:
+      type: RuntimeDefault
+  containers:
+    - resources:
+        limits:
+          cpu: 500m
+          ephemeral-storage: 10Gi
+          memory: 1048M
+        requests:
+          cpu: 150m
+          ephemeral-storage: 2Gi
+          memory: 1024M
+      readinessProbe:
+        httpGet:
+          path: /health
+          port: 8081
+          scheme: HTTP
+        timeoutSeconds: 1
+        periodSeconds: 10
+        successThreshold: 1
+        failureThreshold: 3
+      terminationMessagePath: /dev/termination-log
+      name: lxybondmx
+      env:
+        - name: MY_POD_IP
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: status.podIP
+        - name: BW_PROFILE
+          value: Docker
+        - name: APP_NAME
+          value: lxybondmx
+        - name: BW_LOGLEVEL
+          value: ERROR
+        - name: DISABLE_BWCE_EAR_VALIDATION
+          value: 'False'
+        - name: DRIVERS_URL
+          value: 'https://nexusmaster.alm.europe.cloudcenter.corp/repository/maven-releases/com/santander/cib/mw/common/TIBCOJARS/1.0.0/TIBCOJARS-1.0.0.jar'
+        - name: THIRD_PARTY_URL
+        - name: CERTS_URL
+        - name: WILY_MOM_FQDN
+        - name: WILY_MOM_PORT
+          value: '5001'
+        - name: TIBCO_PLUG_INS_URL
+          value: 'https://nexusmaster.alm.europe.cloudcenter.corp/repository/maven-releases/com/santander/cib/mw/common/tibco_plugins/1.0.5/tibco_plugins-1.0.5.zip'
+        - name: JAVA_OPTS_EXT
+          value: '-Dlog4j2.formatMsgNoLookups=true -Dspring.profiles.active=dev -Dspring.cloud.config.label= -Djava.security.egd=file:/dev/./urandom'
+        - name: BW_JAVA_OPTS
+          value: '-Djava.property.com.tibco.tibjms.reconnect.attempts=6,5000 -Dbw.engine.enable.memory.saving.mode=true'
+        - name: BW_APP_MONITORING_CONFIG
+        - name: BW_COMPONENT_JOB_FLOWLIMIT
+          value: '8'
+        - name: CUSTOM_LOGBACK_URL
+        - name: PROJECT_NAME
+        - name: TZ
+          value: Europe/Madrid
+        - name: BW_ENGINE_THREADCOUNT
+          value: '4'
+        - name: BW_APPLICATION_JOB_FLOWLIMIT
+          value: '8'
+        - name: JAVA_TOOL_OPTIONS
+          value: '-Dfile.encoding=UTF-8'
+        - name: ARTIFACT_URL
+          value: 'https://nexus.alm.europe.cloudcenter.corp/repository/maven-public/com/santander/cib/mw/lxybondmx/1.0.0-SNAPSHOT/lxybondmx-1.0.0-20260120.103636-4.ear'
+      securityContext:
+        capabilities:
+          drop:
+            - ALL
+        privileged: false
+        runAsUser: 1000
+        runAsNonRoot: true
+        allowPrivilegeEscalation: false
+      ports:
+        - containerPort: 8080
+          protocol: TCP
+      imagePullPolicy: IfNotPresent
+      volumeMounts:
+        - name: kube-api-access-rmzcg
+          readOnly: true
+          mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      terminationMessagePolicy: File
+      image: 'produban/bwce:2.80.4.RELEASE'
+  serviceAccount: default
+  volumes:
+    - name: kube-api-access-rmzcg
+      projected:
+        sources:
+          - serviceAccountToken:
+              expirationSeconds: 3607
+              path: token
+          - configMap:
+              name: kube-root-ca.crt
+              items:
+                - key: ca.crt
+                  path: ca.crt
+          - downwardAPI:
+              items:
+                - path: namespace
+                  fieldRef:
+                    apiVersion: v1
+                    fieldPath: metadata.namespace
+          - configMap:
+              name: openshift-service-ca.crt
+              items:
+                - key: service-ca.crt
+                  path: service-ca.crt
+        defaultMode: 420
+  dnsPolicy: ClusterFirst
+  tolerations:
+    - key: node.kubernetes.io/not-ready
+      operator: Exists
+      effect: NoExecute
+      tolerationSeconds: 300
+    - key: node.kubernetes.io/unreachable
+      operator: Exists
+      effect: NoExecute
+      tolerationSeconds: 300
+    - key: node.kubernetes.io/memory-pressure
+      operator: Exists
+      effect: NoSchedule
+  priorityClassName: medium-priority
+status:
+  containerStatuses:
+    - restartCount: 0
+      started: true
+      ready: true
+      name: lxybondmx
+      state:
+        running:
+          startedAt: '2026-01-20T12:10:43Z'
+      volumeMounts:
+        - name: kube-api-access-rmzcg
+          mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+          readOnly: true
+          recursiveReadOnly: Disabled
+      imageID: 'registry.global.ccc.srvb.bo.paas.cloudcenter.corp/produban/bwce@sha256:6e46cc3904ef553420ea32aed4dea553e464ae1d1e7d94cf2bd028422c287a59'
+      image: 'registry.global.ccc.srvb.bo.paas.cloudcenter.corp/produban/bwce:2.80.4.RELEASE'
+      lastState: {}
+      containerID: 'cri-o://80b769c150852d99eb6ad179b9dd8b3fc351be5cd1ad2ee5af5a2985ad5012df'
+  qosClass: Burstable
+  hostIPs:
+    - ip: 180.44.111.44
+  podIPs:
+    - ip: 10.118.7.220
+  podIP: 10.118.7.220
+  hostIP: 180.44.111.44
+  startTime: '2026-01-20T12:10:42Z'
+  conditions:
+    - type: PodReadyToStartContainers
+      status: 'True'
+      lastProbeTime: null
+      lastTransitionTime: '2026-01-20T12:10:44Z'
+    - type: Initialized
+      status: 'True'
+      lastProbeTime: null
+      lastTransitionTime: '2026-01-20T12:10:42Z'
+    - type: Ready
+      status: 'True'
+      lastProbeTime: null
+      lastTransitionTime: '2026-01-20T12:14:12Z'
+    - type: ContainersReady
+      status: 'True'
+      lastProbeTime: null
+      lastTransitionTime: '2026-01-20T12:14:12Z'
+    - type: PodScheduled
+      status: 'True'
+      lastProbeTime: null
+      lastTransitionTime: '2026-01-20T12:10:42Z'
+  phase: Running

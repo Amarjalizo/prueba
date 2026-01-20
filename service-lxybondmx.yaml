@@ -1,0 +1,77 @@
+﻿kind: Service
+apiVersion: v1
+metadata:
+  name: lxybondmx
+  namespace: cib-mkrt-rates-dev
+  uid: 23958215-806d-409c-9c94-2945650b9d43
+  resourceVersion: '1794058697'
+  creationTimestamp: '2026-01-19T17:07:12Z'
+  labels:
+    app: lxybondmx
+    app_name: lxybondmx
+    environment: dev
+    ucd_app_name: cib-rates-integracion
+    ucd_comp_name: cib-mw-lxybondmx
+    version: 1.0.0-SNAPSHOT-20260120.103636-4
+  managedFields:
+    - manager: OpenAPI-Generator
+      operation: Update
+      apiVersion: v1
+      time: '2026-01-20T10:42:39Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:labels':
+            .: {}
+            'f:app': {}
+            'f:environment': {}
+            'f:ucd_app_name': {}
+            'f:version': {}
+        'f:spec':
+          'f:internalTrafficPolicy': {}
+          'f:ports':
+            .: {}
+            'k:{"port":8081,"protocol":"TCP"}':
+              .: {}
+              'f:port': {}
+              'f:protocol': {}
+              'f:targetPort': {}
+          'f:sessionAffinity': {}
+          'f:type': {}
+    - manager: Mozilla
+      operation: Update
+      apiVersion: v1
+      time: '2026-01-20T11:43:43Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:labels':
+            'f:app_name': {}
+            'f:ucd_comp_name': {}
+        'f:spec':
+          'f:ports':
+            'k:{"port":8081,"protocol":"TCP"}':
+              'f:name': {}
+          'f:selector': {}
+spec:
+  clusterIP: 10.123.191.18
+  ipFamilies:
+    - IPv4
+  ports:
+    - name: 8081-tcp
+      protocol: TCP
+      port: 8081
+      targetPort: 8081
+  internalTrafficPolicy: Cluster
+  clusterIPs:
+    - 10.123.191.18
+  type: ClusterIP
+  ipFamilyPolicy: SingleStack
+  sessionAffinity: None
+  selector:
+    app_name: lxybondmx
+    deploymentconfig: lxybondmx
+    ucd_app_name: cib-rates-integracion
+    ucd_comp_name: cib-mw-lxybondmx
+status:
+  loadBalancer: {}
