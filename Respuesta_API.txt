@@ -1,0 +1,94 @@
+[
+    {
+        "underlying": "ISINDUMMY1111",
+        "symbol": "C0.GBMRISK.1000001612239",
+        "description": "ISS- BEHLTREU-EUR-LXY",
+        "staticAttributes": [],
+        "prices": [
+            {
+                "recordDate": "2025-11-28T12:00:00Z",
+                "fields": [
+                    {
+                        "id": "C0#CLOSE_MTX",
+                        "name": "PRICE_FACTOR",
+                        "valueField": {
+                            "valueType": 8,
+                            "value": [
+                                [
+                                    "ISIN",
+                                    "MATURITY FUT",
+                                    "LABEL",
+                                    "MATURITY BOND",
+                                    "PRICE FACTOR"
+                                ],
+                                [
+                                    "ISINDUMMY1111",
+                                    20251222,
+                                    "LABEL11",
+                                    20330307,
+                                    365.81418146343356
+                                ],
+                                [
+                                    "ISINDUMMY1111",
+                                    20260323,
+                                    "LABEL11",
+                                    20330307,
+                                    363.31254334830385
+                                ],
+                                [
+                                    "ISINDUMMY1111",
+                                    20260622,
+                                    "LABEL11",
+                                    20330307,
+                                    365.9350782881995
+                                ]
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "recordDate": "2025-11-25T12:00:00Z",
+                "fields": [
+                    {
+                        "id": "C0#CLOSE_MTX",
+                        "name": "PRICE_FACTOR",
+                        "valueField": {
+                            "valueType": 8,
+                            "value": [
+                                [
+                                    "ISIN",
+                                    "MATURITY FUT",
+                                    "LABEL",
+                                    "MATURITY BOND",
+                                    "PRICE FACTOR"
+                                ],
+                                [
+                                    "ISINDUMMY1111",
+                                    20251222,
+                                    "LABEL11",
+                                    20281016,
+                                    324.91351148218143
+                                ],
+                                [
+                                    "ISINDUMMY1111",
+                                    20260323,
+                                    "LABEL11",
+                                    20281016,
+                                    323.07834319757796
+                                ],
+                                [
+                                    "ISINDUMMY1111",
+                                    20260622,
+                                    "LABEL11",
+                                    20281016,
+                                    325.0925272841766
+                                ]
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]
