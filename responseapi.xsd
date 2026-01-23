@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:element name="Root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Asset" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="underlying" type="xs:string"/>
+              <xs:element name="symbol" type="xs:string"/>
+              <xs:element name="description" type="xs:string"/>
+              <xs:element name="staticAttributes" minOccurs="0" maxOccurs="unbounded" type="xs:anyType"/>
+              
+              <xs:element name="prices" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="recordDate" type="xs:dateTime"/>
+                    <xs:element name="fields" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="id" type="xs:string"/>
+                          <xs:element name="name" type="xs:string"/>
+                          <xs:element name="valueField">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="valueType" type="xs:integer"/>
+                                <xs:element name="value" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="item" type="xs:string" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
